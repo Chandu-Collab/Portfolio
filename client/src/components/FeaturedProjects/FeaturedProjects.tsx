@@ -173,32 +173,32 @@ interface Project {
 const mockProjects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    image: "/assets/projects/ecommerce.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/ecommerce",
+    title: "School Management System",
+    description: "An AI-enhanced school management platform inspired by Teachmint, featuring comprehensive student registration, academic tracking, and innovative AI-powered teaching assistance.",
+    technologies: ["React", "Node.js", "MySQL", "AI Integration", "Express"],
+    image: "/assets/projects/school.jpg",
+    liveUrl: "#",
+    githubUrl: "#",
     featured: true
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates using Socket.io. Includes team collaboration features and progress tracking.",
-    technologies: ["React", "Socket.io", "Node.js", "PostgreSQL"],
-    image: "/assets/projects/taskapp.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/taskapp",
+    title: "TaurusAI Admin Portal",
+    description: "An intelligent job automation platform that leverages AI to streamline the entire job application process. Built with Flutter, Node.js, and Firebase.",
+    technologies: ["Flutter", "Node.js", "Firebase", "AI Integration", "REST APIs"],
+    image: "/assets/projects/taurusai.jpg",
+    liveUrl: "#",
+    githubUrl: "#",
     featured: true
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard with location-based forecasts and interactive charts. Built with modern React and Chart.js.",
-    technologies: ["React", "TypeScript", "Weather API", "Chart.js"],
-    image: "/assets/projects/weather.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/weather",
+    title: "Fruitsy",
+    description: "A subscription-based fresh fruit delivery platform offering daily, weekly, and monthly plans with customizable bowl sizes. Built with Flutter and Firebase.",
+    technologies: ["Flutter", "Firebase", "Firestore", "Real-time DB", "Push Notifications"],
+    image: "/assets/projects/fruitsy.jpg",
+    liveUrl: "#",
+    githubUrl: "#",
     featured: true
   }
 ];

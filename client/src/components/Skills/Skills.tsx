@@ -114,29 +114,53 @@ interface Skill {
 const mockSkills: Skill[] = [
   // Frontend
   { name: "React.js", level: 90, category: "Frontend" },
+  { name: "React Native", level: 85, category: "Frontend" },
+  { name: "Next.js", level: 80, category: "Frontend" },
   { name: "HTML5", level: 95, category: "Frontend" },
   { name: "CSS3", level: 90, category: "Frontend" },
   { name: "JavaScript (ES6+)", level: 90, category: "Frontend" },
+  { name: "TypeScript", level: 85, category: "Frontend" },
   { name: "Flutter", level: 85, category: "Frontend" },
   { name: "Three.js", level: 75, category: "Frontend" },
+  { name: "TailwindCSS", level: 85, category: "Frontend" },
+  { name: "React Router", level: 90, category: "Frontend" },
+  { name: "Redux", level: 80, category: "Frontend" },
   
   // Backend
   { name: "Node.js", level: 85, category: "Backend" },
   { name: "Express.js", level: 80, category: "Backend" },
+  { name: "Python", level: 75, category: "Backend" },
+  { name: "PHP", level: 70, category: "Backend" },
+  { name: "C#", level: 70, category: "Backend" },
+  { name: ".NET", level: 70, category: "Backend" },
+  { name: "FastAPI", level: 75, category: "Backend" },
   { name: "REST APIs", level: 90, category: "Backend" },
   { name: "JWT Authentication", level: 85, category: "Backend" },
+  { name: "Socket.io", level: 80, category: "Backend" },
   
   // Database
   { name: "MySQL", level: 85, category: "Database" },
   { name: "MongoDB", level: 80, category: "Database" },
   { name: "Firebase", level: 85, category: "Database" },
-  { name: "Firestore", level: 80, category: "Database" },
+  { name: "PostgreSQL", level: 80, category: "Database" },
+  { name: "SQLite", level: 75, category: "Database" },
+  { name: "Supabase", level: 75, category: "Database" },
+  { name: "Microsoft SQL Server", level: 70, category: "Database" },
+  
+  // Cloud & Deployment
+  { name: "AWS", level: 75, category: "Cloud" },
+  { name: "Azure", level: 70, category: "Cloud" },
+  { name: "Firebase Hosting", level: 85, category: "Cloud" },
+  { name: "Vercel", level: 80, category: "Cloud" },
   
   // Tools & Others
   { name: "Git & GitHub", level: 90, category: "Tools" },
-  { name: "Firebase Hosting", level: 85, category: "Tools" },
-  { name: "Vercel", level: 80, category: "Tools" },
-  { name: "Netlify", level: 80, category: "Tools" }
+  { name: "GitLab", level: 80, category: "Tools" },
+  { name: "Postman", level: 85, category: "Tools" },
+  { name: "Figma", level: 80, category: "Tools" },
+  { name: "Canva", level: 85, category: "Tools" },
+  { name: "Arduino", level: 70, category: "Tools" },
+  { name: "NPM", level: 90, category: "Tools" }
 ];
 
 const Skills: React.FC = () => {

@@ -343,7 +343,7 @@ const About: React.FC = () => {
               <StatLabel>Years Experience</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>5+</StatNumber>
+              <StatNumber>40+</StatNumber>
               <StatLabel>Technologies</StatLabel>
             </StatItem>
           </StatsContainer>
