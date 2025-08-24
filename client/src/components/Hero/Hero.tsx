@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -192,12 +193,14 @@ const ProfileImage = styled(motion.div)`
   }
 
   img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
     position: relative;
     z-index: 1;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 `;
 
@@ -268,7 +271,7 @@ const Hero: React.FC = () => {
             </Greeting>
             
             <Name variants={itemVariants}>
-              Your Name
+              Madduri Chandra Hasa Reddy
             </Name>
             
             <Title variants={itemVariants}>
@@ -276,8 +279,10 @@ const Hero: React.FC = () => {
             </Title>
             
             <Description variants={itemVariants}>
-              I create beautiful, functional, and user-friendly applications using modern 
-              technologies. Passionate about clean code and innovative solutions.
+              BE (ECE) graduate and Full-Stack Developer passionate about building innovative 
+              mobile and web applications. I've developed comprehensive solutions including 
+              AI-powered school management systems, admin portals for job automation platforms, 
+              and e-commerce applications using React, Node.js, Flutter, and Firebase.
             </Description>
             
             <ActionButtons variants={itemVariants}>
@@ -301,7 +306,7 @@ const Hero: React.FC = () => {
             
             <SocialLinks variants={itemVariants}>
               <SocialLink
-                href="https://github.com"
+                href="https://github.com/Chandu-Collab"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -310,7 +315,7 @@ const Hero: React.FC = () => {
               </SocialLink>
               
               <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/chandra-hasa-reddy-729429240/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -319,12 +324,12 @@ const Hero: React.FC = () => {
               </SocialLink>
               
               <SocialLink
-                href="https://twitter.com"
+                href="https://www.instagram.com/chessmen_67/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
               >
-                <FaTwitter />
+                <AiFillInstagram />
               </SocialLink>
             </SocialLinks>
           </motion.div>
@@ -336,23 +341,10 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <ProfileImage>
-            {/* Replace with your actual profile image */}
-            <div style={{ 
-              width: '90%', 
-              height: '90%', 
-              borderRadius: '50%', 
-              background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'white',
-              fontSize: '4rem',
-              fontWeight: 'bold',
-              position: 'relative',
-              zIndex: 1
-            }}>
-              YN
-            </div>
+            <img 
+              src={require('../../assets/WhatsApp Image 2025-07-08 at 00.12.26.jpeg')} 
+              alt="Madduri Chandra Hasa Reddy"
+            />
           </ProfileImage>
           
           <FloatingElements>

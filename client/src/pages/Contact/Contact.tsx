@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
 
 const ContactContainer = styled.div`
   padding-top: 120px;
@@ -293,17 +294,17 @@ const Contact: React.FC = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'your.email@example.com'
+      value: 'chandrahasareddy65@gmail.com'
     },
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+1 (555) 123-4567'
+      value: '+91 9704718538'
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'Your City, Country'
+      value: 'Bengaluru, India'
     }
   ];
 
@@ -349,14 +350,14 @@ const Contact: React.FC = () => {
               <div>
                 <InfoLabel>Follow Me</InfoLabel>
                 <SocialLinks>
-                  <SocialLink href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <SocialLink href="https://github.com/Chandu-Collab" target="_blank" rel="noopener noreferrer">
                     <FaGithub />
                   </SocialLink>
-                  <SocialLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <SocialLink href="https://www.linkedin.com/in/chandra-hasa-reddy-729429240/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin />
                   </SocialLink>
-                  <SocialLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter />
+                  <SocialLink href="https://www.instagram.com/chessmen_67/" target="_blank" rel="noopener noreferrer">
+                    <AiFillInstagram />
                   </SocialLink>
                 </SocialLinks>
               </div>
@@ -391,7 +392,7 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your.email@example.com"
+                  placeholder="chandrahasareddy65@gmail.com"
                   required
                 />
               </FormGroup>

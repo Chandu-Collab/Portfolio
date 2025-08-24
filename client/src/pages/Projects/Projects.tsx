@@ -191,63 +191,33 @@ interface Project {
 const mockProjects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    title: "School Management System",
+    description: "An AI-enhanced school management platform inspired by Teachmint, featuring comprehensive student registration, academic tracking, and innovative AI-powered teaching assistance. Built with React, Node.js, and MySQL to streamline educational administration.",
+    technologies: ["React", "Node.js", "MySQL", "AI Integration", "Express"],
     category: "Full Stack",
-    image: "/assets/projects/ecommerce.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/ecommerce"
+    image: "/assets/projects/school.jpg",
+    liveUrl: "#",
+    githubUrl: "#"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates using Socket.io. Includes team collaboration features and progress tracking.",
-    technologies: ["React", "Socket.io", "Node.js", "PostgreSQL"],
+    title: "TaurusAI Admin Portal",
+    description: "An intelligent job automation platform that leverages AI to streamline the entire job application process. Built with Flutter, Node.js, and Firebase, featuring AI-driven job applications, skill gap analysis, and course recommendations.",
+    technologies: ["Flutter", "Node.js", "Firebase", "AI Integration", "REST APIs"],
     category: "Full Stack",
-    image: "/assets/projects/taskapp.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/taskapp"
+    image: "/assets/projects/taurusai.jpg",
+    liveUrl: "#",
+    githubUrl: "#"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather dashboard with location-based forecasts and interactive charts. Built with modern React and Chart.js.",
-    technologies: ["React", "TypeScript", "Weather API", "Chart.js"],
-    category: "Frontend",
-    image: "/assets/projects/weather.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/weather"
-  },
-  {
-    id: 4,
-    title: "REST API Server",
-    description: "A robust RESTful API server built with Node.js and Express. Features authentication, rate limiting, and comprehensive documentation.",
-    technologies: ["Node.js", "Express", "MongoDB", "JWT", "Swagger"],
-    category: "Backend",
-    image: "/assets/projects/api.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/api"
-  },
-  {
-    id: 5,
-    title: "Portfolio Website",
-    description: "A modern, responsive portfolio website built with React and styled-components. Features smooth animations and optimized performance.",
-    technologies: ["React", "TypeScript", "Styled Components", "Framer Motion"],
-    category: "Frontend",
-    image: "/assets/projects/portfolio.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/portfolio"
-  },
-  {
-    id: 6,
-    title: "Chat Application",
-    description: "Real-time chat application with multiple rooms, file sharing, and user authentication. Built with Socket.io and React.",
-    technologies: ["React", "Socket.io", "Node.js", "Express", "MongoDB"],
-    category: "Full Stack",
-    image: "/assets/projects/chat.jpg",
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com/username/chat"
+    title: "Fruitsy",
+    description: "A subscription-based fresh fruit delivery platform offering daily, weekly, and monthly plans with customizable bowl sizes. Built with Flutter and Firebase to provide seamless ordering and doorstep delivery of fresh fruits.",
+    technologies: ["Flutter", "Firebase", "Firestore", "Real-time DB", "Push Notifications"],
+    category: "Mobile",
+    image: "/assets/projects/fruitsy.jpg",
+    liveUrl: "#",
+    githubUrl: "#"
   }
 ];
 

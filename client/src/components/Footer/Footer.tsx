@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaHeart, FaArrowUp } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
 
 const FooterContainer = styled.footer`
   background: ${({ theme }) => theme.colors.surface};
@@ -146,13 +147,13 @@ const Footer: React.FC = () => {
       <Container>
         <FooterContent>
           <FooterLeft>
-            <Logo>Portfolio</Logo>
+            <Logo>Chandra Hasa Reddy</Logo>
           </FooterLeft>
 
           <FooterCenter>
             <SocialLinks>
               <SocialLink
-                href="https://github.com"
+                href="https://github.com/Chandu-Collab"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -2 }}
@@ -162,7 +163,7 @@ const Footer: React.FC = () => {
               </SocialLink>
               
               <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/chandra-hasa-reddy-729429240/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -2 }}
@@ -172,13 +173,13 @@ const Footer: React.FC = () => {
               </SocialLink>
               
               <SocialLink
-                href="https://twitter.com"
+                href="https://www.instagram.com/chessmen_67/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaTwitter />
+                <AiFillInstagram />
               </SocialLink>
             </SocialLinks>
           </FooterCenter>
@@ -199,7 +200,7 @@ const Footer: React.FC = () => {
 
         <FooterBottom>
           <Copyright>
-            <span>© {currentYear} Your Name. All rights reserved.</span>
+            <span>© {currentYear} Madduri Chandra Hasa Reddy. All rights reserved.</span>
             <span>
               Made with{' '}
               <HeartIcon
@@ -208,7 +209,7 @@ const Footer: React.FC = () => {
               >
                 <FaHeart />
               </HeartIcon>{' '}
-              and lots of coffee
+              and passion for coding
             </span>
           </Copyright>
         </FooterBottom>

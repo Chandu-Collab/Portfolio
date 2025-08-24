@@ -182,7 +182,7 @@ const Navbar: React.FC = () => {
         transition={{ duration: 0.6 }}
       >
         <NavContent>
-          <Logo to="/">Portfolio</Logo>
+          <Logo to="/">CR</Logo>
           
           <DesktopNav>
             {navItems.map((item) => (

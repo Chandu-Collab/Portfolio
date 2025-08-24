@@ -257,22 +257,16 @@ const About: React.FC = () => {
 
   const experience = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Company Inc.",
-      duration: "Jan 2022 - Present",
-      description: "Led development of multiple web applications using React and Node.js. Mentored junior developers and implemented best practices for code quality and performance."
+      title: "Full Stack Developer",
+      company: "Mantravat Info Tech",
+      duration: "27 Jan 2025 – Present",
+      description: "Designed and developed projects from scratch, ensuring quality through testing and debugging. Deployed completed applications and implemented updates as required. Worked across both frontend and backend to deliver fully functional, scalable solutions."
     },
     {
-      title: "Frontend Developer",
-      company: "Startup XYZ",
-      duration: "Jun 2020 - Dec 2021",
-      description: "Developed responsive user interfaces and improved application performance by 40%. Collaborated with design team to implement pixel-perfect designs."
-    },
-    {
-      title: "Junior Developer",
-      company: "Development Agency",
-      duration: "Jan 2019 - May 2020",
-      description: "Built websites and web applications for various clients. Gained experience in multiple technologies and frameworks while working in an agile environment."
+      title: "Intern / Flutter Developer",
+      company: "Node 8 Innovations",
+      duration: "5 Sep 2024 – 5 Jan 2025",
+      description: "Developed mobile application screens and tested them for quality and performance. Collaborated with backend team to integrate APIs and ensure seamless data flow. Assisted in deploying features and fixes to the live environment."
     }
   ];
 
@@ -295,7 +289,7 @@ const About: React.FC = () => {
                 animate={inView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Passionate Developer & Problem Solver
+                BE (ECE) Graduate & Full-Stack Developer
               </Subtitle>
               
               <Description
@@ -304,20 +298,19 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <p>
-                  Hello! I'm a passionate full-stack developer with over 4 years of experience 
-                  creating digital solutions that make a difference. I love turning complex 
-                  problems into simple, beautiful, and intuitive designs.
+                  Hello! I'm a Bachelor of Engineering graduate specializing in Electronics and 
+                  Communication Engineering with a passion for creating impactful mobile and web applications.
                 </p>
                 <p>
-                  My journey in web development started during my computer science studies, 
-                  and since then, I've been constantly learning and adapting to new technologies. 
-                  I enjoy working on both frontend and backend, always striving to write clean, 
-                  efficient code.
+                  My expertise spans across modern technologies including React, Node.js, MySQL, Flutter, 
+                  Firebase, and Three.js. I've successfully delivered several major projects including 
+                  AI-powered school management systems, admin portals for job automation platforms, 
+                  and e-commerce applications.
                 </p>
                 <p>
-                  When I'm not coding, you can find me exploring new technologies, contributing 
-                  to open-source projects, or sharing my knowledge through blog posts and 
-                  mentoring other developers.
+                  Beyond coding, I'm constantly exploring new technologies and frameworks to stay at the 
+                  forefront of development trends. When I'm not immersed in code, you'll find me gaming, 
+                  hanging out with friends, or spending precious time with family.
                 </p>
               </Description>
             </TextContent>
@@ -328,22 +321,10 @@ const About: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
             >
               <AboutImage>
-                <div style={{
-                  width: '95%',
-                  height: '95%',
-                  borderRadius: '1rem',
-                  background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'white',
-                  fontSize: '4rem',
-                  fontWeight: 'bold',
-                  position: 'relative',
-                  zIndex: 1
-                }}>
-                  YN
-                </div>
+                <img 
+                  src={require('../../assets/WhatsApp Image 2025-07-08 at 00.12.26.jpeg')} 
+                  alt="Madduri Chandra Hasa Reddy"
+                />
               </AboutImage>
             </ImageContainer>
           </AboutContent>
@@ -354,16 +335,16 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <StatItem>
-              <StatNumber>50+</StatNumber>
-              <StatLabel>Projects Completed</StatLabel>
+              <StatNumber>3+</StatNumber>
+              <StatLabel>Major Projects</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>4+</StatNumber>
+              <StatNumber>1+</StatNumber>
               <StatLabel>Years Experience</StatLabel>
             </StatItem>
             <StatItem>
-              <StatNumber>20+</StatNumber>
-              <StatLabel>Happy Clients</StatLabel>
+              <StatNumber>5+</StatNumber>
+              <StatLabel>Technologies</StatLabel>
             </StatItem>
           </StatsContainer>
         </Container>

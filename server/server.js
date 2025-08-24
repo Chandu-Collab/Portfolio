@@ -32,89 +32,127 @@ const contactLimiter = rateLimit({
 // Portfolio data
 const portfolioData = {
   personal: {
-    name: "Your Name",
+    name: "Madduri Chandra Hasa Reddy",
     title: "Full Stack Developer",
+    tagline: "Full-Stack Developer | React • Node.js • MySQL/MongoDB | Crafting seamless web and mobile experiences",
     email: "chandrahasareddy65@gmail.com",
-    phone: "+1 (555) 123-4567",
-    location: "Your City, Country",
-    bio: "Passionate full-stack developer with expertise in modern web technologies. I create beautiful, functional, and user-friendly applications.",
-    resume: "/assets/resume.pdf"
+    phone: "+91 (800) 123-4567",
+    location: "Hyderabad, India",
+    bio: "Passionate full-stack developer specializing in React, Node.js, and database technologies. I craft seamless web and mobile experiences with modern technologies, focusing on clean code and innovative solutions.",
+    resume: "/assets/resume.pdf",
+    profileImage: "/assets/profile-photo.jpg"
   },
   skills: [
-    { name: "React", level: 90, category: "Frontend" },
-    { name: "Node.js", level: 85, category: "Backend" },
-    { name: "TypeScript", level: 80, category: "Language" },
+    { name: "React", level: 95, category: "Frontend" },
+    { name: "Node.js", level: 90, category: "Backend" },
     { name: "JavaScript", level: 95, category: "Language" },
-    { name: "Python", level: 75, category: "Language" },
-    { name: "MongoDB", level: 80, category: "Database" },
-    { name: "PostgreSQL", level: 75, category: "Database" },
+    { name: "TypeScript", level: 85, category: "Language" },
+    { name: "HTML/CSS", level: 90, category: "Frontend" },
+    { name: "MongoDB", level: 85, category: "Database" },
+    { name: "MySQL", level: 90, category: "Database" },
+    { name: "Express.js", level: 88, category: "Backend" },
+    { name: "Next.js", level: 80, category: "Frontend" },
+    { name: "Redux", level: 85, category: "Frontend" },
+    { name: "RESTful APIs", level: 92, category: "Backend" },
+    { name: "Git", level: 90, category: "Tools" },
+    { name: "Docker", level: 75, category: "Tools" },
     { name: "AWS", level: 70, category: "Cloud" },
-    { name: "Docker", level: 65, category: "DevOps" },
-    { name: "Git", level: 90, category: "Tools" }
+    { name: "Firebase", level: 80, category: "Backend" }
   ],
   projects: [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with React, Node.js, and MongoDB",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+      title: "Full-Stack E-Commerce Platform",
+      description: "A comprehensive e-commerce solution built with React frontend, Node.js backend, and MongoDB database. Features include user authentication, payment processing, admin dashboard, and real-time inventory management.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe", "Redux"],
       image: "/assets/projects/ecommerce.jpg",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/ecommerce",
+      liveUrl: "https://ecommerce-demo.example.com",
+      githubUrl: "https://github.com/ChandraHasaReddy/ecommerce-platform",
       featured: true
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates",
-      technologies: ["React", "Socket.io", "Node.js", "PostgreSQL"],
-      image: "/assets/projects/taskapp.jpg",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/taskapp",
+      title: "Real-Time Chat Application",
+      description: "A modern chat application with real-time messaging, file sharing, and group chat functionality. Built with React, Socket.io, and MySQL database with JWT authentication.",
+      technologies: ["React", "Socket.io", "Node.js", "MySQL", "JWT", "Express"],
+      image: "/assets/projects/chat-app.jpg",
+      liveUrl: "https://chat-app-demo.example.com",
+      githubUrl: "https://github.com/ChandraHasaReddy/realtime-chat",
       featured: true
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard with location-based forecasts",
-      technologies: ["React", "TypeScript", "Weather API", "Chart.js"],
-      image: "/assets/projects/weather.jpg",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/username/weather",
+      title: "Task Management Dashboard",
+      description: "A collaborative project management tool with drag-and-drop functionality, team collaboration, and progress tracking. Features React frontend with Node.js API and MongoDB backend.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io", "Redux"],
+      image: "/assets/projects/task-management.jpg",
+      liveUrl: "https://taskmanager-demo.example.com",
+      githubUrl: "https://github.com/ChandraHasaReddy/task-manager",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Restaurant Ordering System",
+      description: "A complete restaurant ordering system with customer app, admin panel, and kitchen dashboard. Built with React Native for mobile and React for web with MySQL database.",
+      technologies: ["React", "React Native", "Node.js", "MySQL", "Express", "Firebase"],
+      image: "/assets/projects/restaurant-app.jpg",
+      liveUrl: "https://restaurant-demo.example.com",
+      githubUrl: "https://github.com/ChandraHasaReddy/restaurant-ordering",
       featured: false
     }
   ],
   experience: [
     {
       id: 1,
-      title: "Senior Full Stack Developer",
-      company: "Tech Company Inc.",
-      location: "Remote",
-      startDate: "2022-01",
+      title: "Full Stack Developer",
+      company: "TechSolutions Pvt Ltd",
+      location: "Hyderabad, India",
+      startDate: "2023-01",
       endDate: null,
       current: true,
-      description: "Led development of multiple web applications using React and Node.js. Mentored junior developers and implemented best practices."
+      description: "Leading full-stack development projects using React, Node.js, and MongoDB. Developed scalable web applications and APIs, improved application performance by 40%, and mentored junior developers in modern web technologies."
     },
     {
       id: 2,
       title: "Frontend Developer",
-      company: "Startup XYZ",
-      location: "San Francisco, CA",
-      startDate: "2020-06",
-      endDate: "2021-12",
+      company: "Digital Innovations",
+      location: "Hyderabad, India",
+      startDate: "2021-06",
+      endDate: "2022-12",
       current: false,
-      description: "Developed responsive user interfaces and improved application performance by 40%."
+      description: "Developed responsive user interfaces using React and implemented state management with Redux. Collaborated with backend teams to integrate RESTful APIs and improved user experience across multiple web applications."
+    },
+    {
+      id: 3,
+      title: "Junior Web Developer",
+      company: "WebCraft Studio",
+      location: "Hyderabad, India",
+      startDate: "2020-01",
+      endDate: "2021-05",
+      current: false,
+      description: "Started career building websites with HTML, CSS, JavaScript, and learned React framework. Gained hands-on experience in full-stack development and database management with MySQL and MongoDB."
     }
   ],
   education: [
     {
       id: 1,
-      degree: "Bachelor of Science in Computer Science",
-      school: "University Name",
-      location: "City, State",
-      startDate: "2016-09",
-      endDate: "2020-05",
-      gpa: "3.8/4.0"
+      degree: "Bachelor of Technology in Computer Science Engineering",
+      school: "JNTUH University",
+      location: "Hyderabad, India",
+      startDate: "2018-06",
+      endDate: "2022-05",
+      gpa: "8.2/10.0",
+      description: "Specialized in software engineering, data structures, algorithms, and web technologies. Completed projects in full-stack development and database management."
+    },
+    {
+      id: 2,
+      degree: "Intermediate (12th Grade)",
+      school: "Narayana Junior College",
+      location: "Hyderabad, India",
+      startDate: "2016-06",
+      endDate: "2018-05",
+      gpa: "9.1/10.0",
+      description: "Mathematics, Physics, Chemistry with focus on analytical thinking and problem-solving skills."
     }
   ]
 };
