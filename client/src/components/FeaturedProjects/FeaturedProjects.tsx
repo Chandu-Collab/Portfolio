@@ -54,12 +54,15 @@ const ProjectCard = styled(motion.div)`
   border-radius: ${({ theme }) => theme.borderRadius.xl};
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.shadows.lg};
-  transition: ${({ theme }) => theme.transitions.normal};
+  transition: ${({ theme }) => theme.transitions.smooth};
   border: 1px solid rgba(148, 163, 184, 0.1);
+  cursor: pointer;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: ${({ theme }) => theme.shadows.xl};
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
   }
 `;
 
@@ -77,11 +80,11 @@ const ProjectImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: ${({ theme }) => theme.transitions.normal};
+    transition: ${({ theme }) => theme.transitions.smooth};
   }
 
   &:hover img {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(2deg);
   }
 `;
 
@@ -220,20 +223,22 @@ const FeaturedProjects: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.15
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { 
+      y: 80, 
+      opacity: 0,
+      scale: 0.8
+    },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6
-      }
+      scale: 1
     }
   };
 

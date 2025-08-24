@@ -80,6 +80,8 @@ declare module 'styled-components' {
       fast: string;
       normal: string;
       slow: string;
+      smooth: string;
+      spring: string;
     };
   }
 }

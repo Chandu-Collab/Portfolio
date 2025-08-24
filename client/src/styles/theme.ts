@@ -74,8 +74,10 @@ export const theme = {
     glow: '0 0 20px rgba(99, 102, 241, 0.3)'
   },
   transitions: {
-    fast: '0.15s ease-in-out',
-    normal: '0.3s ease-in-out',
-    slow: '0.5s ease-in-out'
+    fast: '0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+    normal: '0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+    slow: '0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+    smooth: '0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+    spring: '0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
   }
 };

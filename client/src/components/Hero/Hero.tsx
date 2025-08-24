@@ -228,20 +228,22 @@ const Hero: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.15
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { 
+      y: 60, 
+      opacity: 0,
+      scale: 0.9
+    },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6
-      }
+      scale: 1
     }
   };
 
@@ -288,16 +290,34 @@ const Hero: React.FC = () => {
             <ActionButtons variants={itemVariants}>
               <PrimaryButton
                 onClick={handleContactScroll}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 20px 35px -5px rgba(99, 102, 241, 0.3)",
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20
+                }}
               >
                 Get In Touch
               </PrimaryButton>
               
               <SecondaryButton
                 onClick={handleResumeDownload}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  borderColor: "rgba(99, 102, 241, 1)",
+                  y: -2
+                }}
                 whileTap={{ scale: 0.95 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 20
+                }}
               >
                 <FaDownload />
                 Resume
@@ -309,7 +329,18 @@ const Hero: React.FC = () => {
                 href="https://github.com/Chandu-Collab"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ 
+                  scale: 1.3,
+                  y: -3,
+                  rotate: [0, -5, 5, 0],
+                  color: "#6366f1"
+                }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10
+                }}
               >
                 <FaGithub />
               </SocialLink>
@@ -318,7 +349,18 @@ const Hero: React.FC = () => {
                 href="https://www.linkedin.com/in/chandra-hasa-reddy-729429240/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ 
+                  scale: 1.3,
+                  y: -3,
+                  rotate: [0, -5, 5, 0],
+                  color: "#0077b5"
+                }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10
+                }}
               >
                 <FaLinkedin />
               </SocialLink>
@@ -327,7 +369,18 @@ const Hero: React.FC = () => {
                 href="https://www.instagram.com/chessmen_67/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ 
+                  scale: 1.3,
+                  y: -3,
+                  rotate: [0, -5, 5, 0],
+                  color: "#e4405f"
+                }}
+                whileTap={{ scale: 0.9 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10
+                }}
               >
                 <AiFillInstagram />
               </SocialLink>
@@ -336,9 +389,15 @@ const Hero: React.FC = () => {
         </TextContent>
 
         <ImageContainer
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}
+          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+          transition={{ 
+            duration: 1.2, 
+            delay: 0.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 15
+          }}
         >
           <ProfileImage>
             <img 
@@ -348,20 +407,23 @@ const Hero: React.FC = () => {
           </ProfileImage>
           
           <FloatingElements>
-            {[...Array(5)].map((_, i) => (
+            {[...Array(6)].map((_, i) => (
               <FloatingElement
                 key={i}
                 top={`${Math.random() * 80 + 10}%`}
                 left={`${Math.random() * 80 + 10}%`}
-                delay={i * 0.5}
+                delay={i * 0.3}
                 animate={{
-                  y: [0, -20, 0],
-                  x: [0, 10, 0],
+                  y: [0, -25, 0],
+                  x: [0, 15, 0],
+                  rotate: [0, 180, 360],
+                  scale: [1, 1.2, 1],
                 }}
                 transition={{
-                  duration: 3 + i,
+                  duration: 4 + i * 0.5,
                   repeat: Infinity,
-                  delay: i * 0.5,
+                  delay: i * 0.3,
+                  ease: "easeInOut"
                 }}
               />
             ))}
