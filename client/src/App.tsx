@@ -7,6 +7,8 @@ import Navbar from '././components/Navbar/Navbar';
 import Home from '././pages/Home/Home';
 import About from '././pages/About/About';
 import Projects from '././pages/Projects/Projects';
+import ServicesPage from '././pages/Services/Services';
+import BlogPage from '././pages/Blog/Blog';
 import Contact from '././pages/Contact/Contact';
 import Footer from '././components/Footer/Footer';
 
@@ -21,6 +23,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

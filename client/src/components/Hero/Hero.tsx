@@ -425,7 +425,8 @@ const Hero: React.FC = () => {
                   duration: 4 + i * 0.5,
                   repeat: Infinity,
                   delay: i * 0.3,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
+                  type: "tween"
                 }}
               />
             ))}

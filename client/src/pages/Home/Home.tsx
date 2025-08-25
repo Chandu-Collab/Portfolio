@@ -5,6 +5,8 @@ import { FaArrowDown } from 'react-icons/fa';
 import Hero from '../../components/Hero/Hero';
 import FeaturedProjects from '../../components/FeaturedProjects/FeaturedProjects';
 import Skills from '../../components/Skills/Skills';
+import Services from '../../components/Services/Services';
+import Blog from '../../components/Blog/Blog';
 
 const HomeContainer = styled.div`
   padding-top: 80px; // Account for fixed navbar
@@ -81,6 +83,8 @@ const Home: React.FC = () => {
 
       <FeaturedProjects />
       <Skills />
+      <Services />
+      <Blog />
     </HomeContainer>
   );
 };
