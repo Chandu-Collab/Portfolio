@@ -299,35 +299,36 @@ const Contact: React.FC = () => {
 
     try {
       // EmailJS configuration
-      const serviceID = 'service_portfolio';
-      const templateID = 'template_contact';
-      const publicKey = 'your_public_key';
+      // You need to replace these with your actual EmailJS credentials
+      const serviceID = 'service_8st7qhk';  // Your EmailJS service ID
+      const templateID = 'template_wqxp8cp'; // Your EmailJS template ID
+      const publicKey = 'YOUR_PUBLIC_KEY';   // Your EmailJS public key
 
-      // For demo purposes, we'll simulate a successful submission
-      // In production, replace with actual EmailJS credentials
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Uncomment the following when you have EmailJS set up:
-      // const result = await emailjs.send(
-      //   serviceID,
-      //   templateID,
-      //   {
-      //     from_name: formData.name,
-      //     from_email: formData.email,
-      //     subject: formData.subject,
-      //     message: formData.message,
-      //     to_email: 'chandrahasareddy65@gmail.com',
-      //   },
-      //   publicKey
-      // );
+      // Initialize EmailJS (you can also do this in index.html)
+      emailjs.init(publicKey);
 
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'chandrahasareddy65@gmail.com',
+          reply_to: formData.email,
+        }
+      );
+
+      console.log('Email sent successfully:', result);
       setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       console.error('Error sending email:', error);
       setMessage({ 
         type: 'error', 
-        text: 'Failed to send message. Please email me directly at chandrahasareddy65@gmail.com' 
+        text: 'Failed to send message. Please try the "Send Email Directly" button below or email me at chandrahasareddy65@gmail.com' 
       });
     } finally {
       setLoading(false);
