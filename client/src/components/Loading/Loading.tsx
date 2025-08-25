@@ -64,15 +64,27 @@ interface LoadingProps {
 
 const Loading: React.FC<LoadingProps> = ({ text = "Loading..." }) => {
   const dotVariants = {
-    initial: { y: 0 },
-    animate: { y: -10 }
+    initial: { y: 0, scale: 1 },
+    animate: { 
+      y: [-10, 0, -10], 
+      scale: [1, 1.2, 1],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        ease: [0.4, 0, 0.2, 1] as const
+      }
+    }
   };
 
   const containerVariants = {
-    initial: { opacity: 0 },
+    initial: { opacity: 0, scale: 0.9 },
     animate: { 
       opacity: 1,
-      transition: { duration: 0.3 }
+      scale: 1,
+      transition: { 
+        duration: 0.5,
+        ease: [0.4, 0, 0.2, 1] as const
+      }
     }
   };
 
@@ -82,7 +94,16 @@ const Loading: React.FC<LoadingProps> = ({ text = "Loading..." }) => {
       initial="initial"
       animate="animate"
     >
-      <SpinnerRing />
+      <motion.div 
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      >
+        <SpinnerRing />
+      </motion.div>
       <LoadingText>{text}</LoadingText>
       <DotsContainer>
         {[0, 1, 2].map((index) => (
@@ -91,11 +112,8 @@ const Loading: React.FC<LoadingProps> = ({ text = "Loading..." }) => {
             variants={dotVariants}
             initial="initial"
             animate="animate"
-            transition={{
-              duration: 0.6,
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: index * 0.1
+            style={{
+              animationDelay: `${index * 0.2}s`
             }}
           />
         ))}

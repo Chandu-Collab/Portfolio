@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import GlobalStyles from '././styles/GlobalStyles';
 import { theme } from '././styles/theme';
 import Navbar from '././components/Navbar/Navbar';
@@ -11,25 +12,53 @@ import ServicesPage from '././pages/Services/Services';
 import BlogPage from '././pages/Blog/Blog';
 import Contact from '././pages/Contact/Contact';
 import Footer from '././components/Footer/Footer';
+import PageTransition from '././components/PageTransition/PageTransition';
+import ErrorBoundary from '././components/ErrorBoundary/ErrorBoundary';
+
+const AppContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
+const MainContent = styled.main`
+  flex: 1;
+  padding-top: 80px; /* Account for fixed navbar height */
+  min-height: auto; /* Let content determine height */
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding-top: 70px;
+  }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding-top: 60px;
+  }
+`;
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Router>
-        <div className="App">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
+      <ErrorBoundary>
+        <Router>
+          <AppContainer>
+            <Navbar />
+            <MainContent>
+              <PageTransition>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </PageTransition>
+            </MainContent>
+            <Footer />
+          </AppContainer>
+        </Router>
+      </ErrorBoundary>
     </ThemeProvider>
   );
 }
