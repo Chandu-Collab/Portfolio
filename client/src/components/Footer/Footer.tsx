@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin, FaHeart, FaArrowUp, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import { VscCode } from 'react-icons/vsc';
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 import { AiFillInstagram } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -473,7 +472,6 @@ const BackToTop = styled(motion.button)`
 `;
 
 const FooterBottom = styled(motion.div)`
-  border-top: 1px solid rgba(99, 102, 241, 0.2);
   padding-top: ${({ theme }) => theme.spacing.lg};
   text-align: center;
   background: rgba(0, 0, 0, 0.2);
@@ -691,7 +689,7 @@ const Footer: React.FC = () => {
                   whileHover={{ 
                     scale: 1.3, 
                     y: -8,
-                    rotate: [0, -10, 10, 0],
+                    rotate: [0, 10],
                     boxShadow: `0 15px 30px ${social.color}40`
                   }}
                   whileTap={{ scale: 0.9 }}
@@ -775,11 +773,12 @@ const Footer: React.FC = () => {
                   <motion.div
                     className="contact-icon"
                     animate={{
-                      rotate: [0, 5, -5, 0],
+                      rotate: [0, 10],
                       scale: [1, 1.1, 1]
                     }}
                     transition={{
                       duration: 3,
+                      type: "tween",
                       repeat: Infinity,
                       delay: index * 0.5
                     }}
@@ -805,10 +804,11 @@ const Footer: React.FC = () => {
               <HeartIcon
                 animate={{ 
                   scale: [1, 1.3, 1],
-                  rotate: [0, 10, -10, 0]
+                  rotate: [0, 10]
                 }}
                 transition={{ 
                   duration: 2, 
+                  type: "tween", 
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}

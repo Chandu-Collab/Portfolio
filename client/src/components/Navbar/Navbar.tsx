@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { VscCode } from 'react-icons/vsc';
-import { HiOutlineRocketLaunch } from 'react-icons/hi2';
-import { useInView } from 'react-intersection-observer';
 
 const NavbarContainer = styled(motion.nav)<{ scrolled: boolean }>`
   position: fixed;
@@ -21,11 +19,7 @@ const NavbarContainer = styled(motion.nav)<{ scrolled: boolean }>`
       : 'rgba(15, 23, 42, 0.1)'
   };
   backdrop-filter: ${({ scrolled }) => scrolled ? 'blur(20px)' : 'blur(5px)'};
-  border-bottom: ${({ scrolled, theme }) => 
-    scrolled 
-      ? `1px solid rgba(99, 102, 241, 0.1)` 
-      : '1px solid transparent'
-  };
+  border-bottom: 1px solid transparent;
   box-shadow: ${({ scrolled }) => 
     scrolled 
       ? '0 4px 20px rgba(0, 0, 0, 0.05)' 
@@ -360,15 +354,6 @@ const CloseButton = styled(motion.button)`
   z-index: 2;
 `;
 
-const NavIndicator = styled(motion.div)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: ${({ theme }) => theme.colors.gradients.primary};
-  border-radius: ${({ theme }) => theme.borderRadius.full};
-  z-index: 0;
-`;
-
 const navItems = [
   { label: 'Home', path: '/', icon: '🏠' },
   { label: 'About', path: '/about', icon: '👨‍💻' },
@@ -382,8 +367,6 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { scrollY } = useScroll();
-  const navOpacity = useTransform(scrollY, [0, 100], [0.1, 1]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -401,7 +384,7 @@ const Navbar: React.FC = () => {
   const logoVariants = {
     hover: {
       scale: 1.05,
-      rotate: [0, -5, 5, 0],
+      rotate: [0, 10],
       transition: {
         duration: 0.5,
         ease: [0.4, 0, 0.2, 1] as const
@@ -598,12 +581,13 @@ const Navbar: React.FC = () => {
                     <motion.span 
                       style={{ fontSize: '1.2em' }}
                       animate={{ 
-                        rotate: [0, 10, -10, 0],
+                        rotate: [0, 10],
                         scale: [1, 1.1, 1]
                       }}
                       transition={{ 
                         duration: 2,
                         repeat: Infinity,
+                        type: "tween",
                         delay: index * 0.2
                       }}
                     >

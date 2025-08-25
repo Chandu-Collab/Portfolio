@@ -9,7 +9,7 @@ import Services from '../../components/Services/Services';
 import Blog from '../../components/Blog/Blog';
 
 const HomeContainer = styled.div`
-  padding-top: 80px; // Account for fixed navbar
+  // No padding needed here as MainContent already handles navbar spacing
 `;
 
 const ScrollIndicator = styled(motion.div)`

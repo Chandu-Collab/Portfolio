@@ -331,10 +331,10 @@ const Hero: React.FC = () => {
                 href="https://github.com/Chandu-Collab"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.3,
                   y: -3,
-                  rotate: [0, -5, 5, 0],
+                  rotate: [0, 10],
                   color: "#6366f1"
                 }}
                 whileTap={{ scale: 0.9 }}
@@ -351,10 +351,10 @@ const Hero: React.FC = () => {
                 href="https://www.linkedin.com/in/chandra-hasa-reddy-729429240/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.3,
                   y: -3,
-                  rotate: [0, -5, 5, 0],
+                  rotate: [0, 10],
                   color: "#0077b5"
                 }}
                 whileTap={{ scale: 0.9 }}
@@ -371,10 +371,10 @@ const Hero: React.FC = () => {
                 href="https://www.instagram.com/chessmen_67/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.3,
                   y: -3,
-                  rotate: [0, -5, 5, 0],
+                  rotate: [0, 10],
                   color: "#e4405f"
                 }}
                 whileTap={{ scale: 0.9 }}

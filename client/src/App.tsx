@@ -23,15 +23,15 @@ const AppContainer = styled.div`
 
 const MainContent = styled.main`
   flex: 1;
-  padding-top: 80px; /* Account for fixed navbar height */
+  padding-top: 60px; /* Reduced padding for less space */
   min-height: auto; /* Let content determine height */
   
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    padding-top: 70px;
+    padding-top: 55px;
   }
   
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding-top: 60px;
+    padding-top: 50px;
   }
 `;
 
