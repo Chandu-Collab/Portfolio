@@ -312,21 +312,21 @@ const Contact: React.FC = () => {
         serviceID,
         templateID,
         {
-          // Contact form data that YOU should receive
-          contact_name: formData.name,
-          contact_email: formData.email,
-          contact_subject: formData.subject,
-          contact_message: formData.message,
-          // Your details (recipient)
-          to_name: 'Chandra Hasa Reddy',
-          to_email: 'chandrahasareddy65@gmail.com',
-          // User details (sender) 
-          from_name: formData.name,
-          from_email: formData.email,
-          reply_to: formData.email,
+          // Simple variable names that work with EmailJS
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
           // Additional context
-          website_name: 'Portfolio Website',
-          submission_time: new Date().toLocaleString(),
+          user_name: formData.name,
+          user_email: formData.email,
+          user_subject: formData.subject,
+          user_message: formData.message,
+          // Your details
+          to_name: 'Chandra Hasa Reddy',
+          reply_to: formData.email,
+          // Timestamp
+          timestamp: new Date().toLocaleString(),
         }
       );
 
