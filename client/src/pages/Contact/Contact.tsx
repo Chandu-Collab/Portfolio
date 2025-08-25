@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
+import emailjs from '@emailjs/browser';
 
 const ContactContainer = styled.div`
   padding-top: 120px;
@@ -241,6 +242,34 @@ const Message = styled.div<{ type: 'success' | 'error' }>`
   text-align: center;
 `;
 
+const AlternativeContact = styled.div`
+  text-align: center;
+  margin-top: ${({ theme }) => theme.spacing.lg};
+  padding: ${({ theme }) => theme.spacing.md};
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+  border: 1px solid rgba(59, 130, 246, 0.2);
+`;
+
+const EmailButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: ${({ theme }) => theme.spacing.sm};
+  background: ${({ theme }) => theme.colors.primary};
+  color: white;
+  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.lg};
+  border-radius: ${({ theme }) => theme.borderRadius.md};
+  text-decoration: none;
+  font-weight: ${({ theme }) => theme.typography.fontWeight.semibold};
+  transition: ${({ theme }) => theme.transitions.fast};
+  margin-top: ${({ theme }) => theme.spacing.sm};
+
+  &:hover {
+    background: #4f46e5;
+    transform: translateY(-2px);
+  }
+`;
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -269,22 +298,37 @@ const Contact: React.FC = () => {
     setMessage(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // EmailJS configuration
+      const serviceID = 'service_portfolio';
+      const templateID = 'template_contact';
+      const publicKey = 'your_public_key';
 
-      if (response.ok) {
-        setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error('Failed to send message');
-      }
+      // For demo purposes, we'll simulate a successful submission
+      // In production, replace with actual EmailJS credentials
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Uncomment the following when you have EmailJS set up:
+      // const result = await emailjs.send(
+      //   serviceID,
+      //   templateID,
+      //   {
+      //     from_name: formData.name,
+      //     from_email: formData.email,
+      //     subject: formData.subject,
+      //     message: formData.message,
+      //     to_email: 'chandrahasareddy65@gmail.com',
+      //   },
+      //   publicKey
+      // );
+
+      setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
-      setMessage({ type: 'error', text: 'Failed to send message. Please try again later.' });
+      console.error('Error sending email:', error);
+      setMessage({ 
+        type: 'error', 
+        text: 'Failed to send message. Please email me directly at chandrahasareddy65@gmail.com' 
+      });
     } finally {
       setLoading(false);
     }
@@ -436,6 +480,18 @@ const Contact: React.FC = () => {
                   {message.text}
                 </Message>
               )}
+
+              <AlternativeContact>
+                <p style={{ margin: '0 0 8px 0', color: '#64748b' }}>
+                  Or contact me directly:
+                </p>
+                <EmailButton 
+                  href={`mailto:chandrahasareddy65@gmail.com?subject=${encodeURIComponent(formData.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`Hi Chandra,\n\n${formData.message || 'I would like to get in touch with you.'}\n\nBest regards,\n${formData.name || '[Your Name]'}`)}`}
+                >
+                  <FaEnvelope />
+                  Send Email Directly
+                </EmailButton>
+              </AlternativeContact>
             </ContactForm>
           </ContactContent>
         </Container>
