@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -223,6 +224,8 @@ const FloatingElement = styled(motion.div)<{ top: string; left: string; delay: n
 `;
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -248,15 +251,14 @@ const Hero: React.FC = () => {
   };
 
   const handleResumeDownload = () => {
-    // Replace with your resume download logic
-    console.log('Downloading resume...');
+    // Open the resume PDF in a new tab for viewing
+    const resumePath = '/resume.pdf';
+    window.open(resumePath, '_blank');
   };
 
   const handleContactScroll = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Navigate to the contact page
+    navigate('/contact');
   };
 
   return (
@@ -320,7 +322,7 @@ const Hero: React.FC = () => {
                 }}
               >
                 <FaDownload />
-                Resume
+                View Resume
               </SecondaryButton>
             </ActionButtons>
             
