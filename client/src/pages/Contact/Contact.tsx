@@ -312,16 +312,21 @@ const Contact: React.FC = () => {
         serviceID,
         templateID,
         {
+          // Contact form data that YOU should receive
+          contact_name: formData.name,
+          contact_email: formData.email,
+          contact_subject: formData.subject,
+          contact_message: formData.message,
+          // Your details (recipient)
           to_name: 'Chandra Hasa Reddy',
           to_email: 'chandrahasareddy65@gmail.com',
+          // User details (sender) 
           from_name: formData.name,
           from_email: formData.email,
           reply_to: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          user_email: formData.email,
-          contact_subject: formData.subject,
-          contact_message: formData.message,
+          // Additional context
+          website_name: 'Portfolio Website',
+          submission_time: new Date().toLocaleString(),
         }
       );
 
