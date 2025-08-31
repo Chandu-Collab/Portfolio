@@ -251,9 +251,8 @@ const Hero: React.FC = () => {
   };
 
   const handleResumeDownload = () => {
-    // Open the resume PDF in a new tab for viewing
-    const resumePath = `${process.env.PUBLIC_URL}/resume.pdf`;
-    window.open(resumePath, '_blank');
+    // Direct link to the resume in the public folder
+    window.open('/resume.pdf', '_blank');
   };
 
   const handleContactScroll = () => {
