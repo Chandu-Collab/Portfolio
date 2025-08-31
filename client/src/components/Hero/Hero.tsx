@@ -252,7 +252,7 @@ const Hero: React.FC = () => {
 
   const handleResumeDownload = () => {
     // Open the resume PDF in a new tab for viewing
-    const resumePath = '/resume.pdf';
+    const resumePath = `${process.env.PUBLIC_URL}/resume.pdf`;
     window.open(resumePath, '_blank');
   };
 
