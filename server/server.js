@@ -39,7 +39,7 @@ const portfolioData = {
     phone: "+91 (800) 123-4567",
     location: "Hyderabad, India",
     bio: "Passionate full-stack developer specializing in React, Node.js, and database technologies. I craft seamless web and mobile experiences with modern technologies, focusing on clean code and innovative solutions.",
-    resume: "/assets/resume.pdf",
+  resume: "/api/resume",
     profileImage: "/assets/profile-photo.jpg"
   },
   skills: [
@@ -158,6 +158,11 @@ const portfolioData = {
 };
 
 // Routes
+// Serve UpdatedResume.pdf from src/components
+app.get('/api/resume', (req, res) => {
+  const filePath = require('path').resolve(__dirname, '../client/src/components/UpdatedResume.pdf');
+  res.sendFile(filePath);
+});
 app.get('/api/portfolio', (req, res) => {
   res.json(portfolioData);
 });

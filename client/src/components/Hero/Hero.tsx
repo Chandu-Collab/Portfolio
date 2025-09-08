@@ -251,8 +251,8 @@ const Hero: React.FC = () => {
   };
 
   const handleResumeDownload = () => {
-    // Direct link to the resume in the public folder
-    window.open('/resume.pdf', '_blank');
+  // Use full backend URL to avoid frontend routing issues
+  window.open('http://localhost:5000/api/resume', '_blank');
   };
 
   const handleContactScroll = () => {
