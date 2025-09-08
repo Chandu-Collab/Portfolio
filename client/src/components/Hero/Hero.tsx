@@ -251,8 +251,8 @@ const Hero: React.FC = () => {
   };
 
   const handleResumeDownload = () => {
-  // Use full backend URL to avoid frontend routing issues
-  window.open('http://localhost:5000/api/resume', '_blank');
+  // Open resume PDF from public folder for static hosting
+  window.open('/Portfolio/UpdatedResume.pdf', '_blank');
   };
 
   const handleContactScroll = () => {
