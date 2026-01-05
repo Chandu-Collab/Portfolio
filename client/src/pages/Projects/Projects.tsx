@@ -206,8 +206,8 @@ const mockProjects: Project[] = [
     technologies: ["Flutter", "Node.js", "Firebase", "AI Integration", "REST APIs"],
     category: "Full Stack",
     image: "/assets/projects/taurusai.jpg",
-    liveUrl: "#",
-    githubUrl: "#"
+    liveUrl: "https://taurusai-bba31.web.app/",
+    githubUrl: "https://github.com/Chandu-Collab/Portfolio"
   },
   {
     id: 3,
