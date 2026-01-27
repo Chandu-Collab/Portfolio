@@ -10,9 +10,7 @@
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "install-server": "cd server && npm install",
-    "install-all": "npm install && npm run install-client && npm run install-server",
-    "deploy": "npm run build",
-    "predeploy": "npm run build"
+    "install-all": "npm install && npm run install-client && npm run install-server"
   },
   "keywords": ["portfolio", "react", "nodejs", "express"],
   "author": "Your Name",
