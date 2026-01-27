@@ -1,4 +1,6 @@
+import taurusAiThumb from '../../assets/taurus-ai.png';
 import React, { useState, useEffect } from 'react';
+import peonyThumb from '../../assets/peony-thumb.png';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -189,13 +191,32 @@ interface Project {
 }
 
 const mockProjects: Project[] = [
+    {
+      id: 4,
+      title: "Peony – Interactive Birthday Gift Experience",
+      description: "Peony is a visually engaging and interactive birthday gift web application designed to create a delightful digital surprise experience. The project focuses on smooth animations, clean UI, responsive design, and user-friendly navigation to deliver an emotional and memorable experience for the recipient.\n\nBuilt using modern frontend technologies and deployed on Netlify, the application demonstrates strong UI development skills, responsive layout handling, performance optimization, and production-level deployment practices. The project reflects creativity combined with real-world frontend engineering standards.",
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Tailwind CSS",
+        "Netlify Deployment",
+        "Responsive Design",
+        "UI Animation"
+      ],
+      category: "Frontend",
+      image: peonyThumb,
+      liveUrl: "https://peony-birthday-gift.netlify.app",
+      githubUrl: "https://github.com/Chandu-Collab/gift"
+    },
   {
     id: 1,
     title: "School Management System",
     description: "An AI-enhanced school management platform inspired by Teachmint, featuring comprehensive student registration, academic tracking, and innovative AI-powered teaching assistance. Built with React, Node.js, and MySQL to streamline educational administration.",
     technologies: ["React", "Node.js", "MySQL", "AI Integration", "Express"],
     category: "Full Stack",
-    image: "/assets/projects/school.jpg",
+    image: '', // intentionally empty to show letters only
     liveUrl: "#",
     githubUrl: "#"
   },
@@ -205,7 +226,7 @@ const mockProjects: Project[] = [
     description: "An intelligent job automation platform that leverages AI to streamline the entire job application process. Built with Flutter, Node.js, and Firebase, featuring AI-driven job applications, skill gap analysis, and course recommendations.",
     technologies: ["Flutter", "Node.js", "Firebase", "AI Integration", "REST APIs"],
     category: "Full Stack",
-    image: "/assets/projects/taurusai.jpg",
+    image: taurusAiThumb,
     liveUrl: "https://taurusai-bba31.web.app/",
     githubUrl: "https://github.com/Chandu-Collab/Portfolio"
   },
@@ -215,7 +236,7 @@ const mockProjects: Project[] = [
     description: "A subscription-based fresh fruit delivery platform offering daily, weekly, and monthly plans with customizable bowl sizes. Built with Flutter and Firebase to provide seamless ordering and doorstep delivery of fresh fruits.",
     technologies: ["Flutter", "Firebase", "Firestore", "Real-time DB", "Push Notifications"],
     category: "Mobile",
-    image: "/assets/projects/fruitsy.jpg",
+    image: '', // intentionally empty to show letters only
     liveUrl: "#",
     githubUrl: "#"
   }
@@ -319,20 +340,25 @@ const Projects: React.FC = () => {
                 whileHover={{ y: -10 }}
                 layout
               >
+
                 <ProjectImage>
-                  <div style={{
-                    width: '100%',
-                    height: '100%',
-                    background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'white',
-                    fontSize: '2rem',
-                    fontWeight: 'bold'
-                  }}>
-                    {project.title.split(' ').map(word => word[0]).join('')}
-                  </div>
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} />
+                  ) : (
+                    <div style={{
+                      width: '100%',
+                      height: '100%',
+                      background: 'linear-gradient(135deg, #6366f1 0%, #ec4899 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '2rem',
+                      fontWeight: 'bold'
+                    }}>
+                      {project.title.split(' ').map(word => word[0]).join('')}
+                    </div>
+                  )}
                 </ProjectImage>
                 
                 <ProjectContent>
