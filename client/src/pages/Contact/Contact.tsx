@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
-import emailjs from '@emailjs/browser';
 
 const ContactContainer = styled.div`
   padding-top: 120px;
@@ -298,47 +297,26 @@ const Contact: React.FC = () => {
     setMessage(null);
 
     try {
-      // EmailJS configuration
-      // Your actual EmailJS credentials
-      const serviceID = 'service_0nvlls8';  // Your EmailJS service ID
-      const templateID = 'template_swq2jv6'; // Your EmailJS template ID
-      const publicKey = 'lyOvhoTCJeb4kabMD';   // Your EmailJS public key
-
-      // Initialize EmailJS (you can also do this in index.html)
-      emailjs.init(publicKey);
-
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        serviceID,
-        templateID,
-        {
-          // Simple variable names that work with EmailJS
+      const response = await fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          subject: formData.subject,
           message: formData.message,
-          // Additional context
-          user_name: formData.name,
-          user_email: formData.email,
-          user_subject: formData.subject,
-          user_message: formData.message,
-          // Your details
-          to_name: 'Chandra Hasa Reddy',
-          reply_to: formData.email,
-          // Timestamp
-          timestamp: new Date().toLocaleString(),
-        }
-      );
-
-      console.log('Email sent successfully:', result);
-      setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setMessage({ 
-        type: 'error', 
-        text: 'Failed to send message. Please try the "Send Email Directly" button below or email me at chandrahasareddy65@gmail.com' 
+        }),
       });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setMessage({ type: 'success', text: 'Message sent successfully! I\'ll get back to you soon.' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setMessage({ type: 'error', text: result.message || 'Failed to send message. Please try again later.' });
+      }
+    } catch (error) {
+      setMessage({ type: 'error', text: 'Failed to send message. Please try again later.' });
     } finally {
       setLoading(false);
     }
