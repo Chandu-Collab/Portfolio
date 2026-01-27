@@ -168,22 +168,22 @@ To enable the contact form:
 
 ## 🚀 Deployment
 
-### Frontend (Netlify/Vercel)
+
+### Frontend (Netlify)
 1. Build the client:
    ```bash
    cd client
    npm run build
    ```
-2. Deploy the `build` folder
+2. Drag and drop the `client/build` folder into the Netlify dashboard, or connect your repository and set the build command to `npm run build` and publish directory to `client/build`.
 
-### Backend (Heroku/Railway)
-1. Deploy the `server` directory
-2. Set environment variables
-3. Update CORS settings for production
+### Backend (Render/Railway/Other)
+1. Deploy the `server` directory to a Node.js hosting service (e.g., Render, Railway).
+2. Set environment variables in your hosting dashboard.
+3. Update CORS settings in your backend for your Netlify frontend URL.
 
-### Full-Stack (Railway/Render)
-1. Deploy the entire repository
-2. Configure build commands for both client and server
+### Full-Stack
+Netlify is for frontend only. Deploy your backend separately, then update your frontend API URLs to point to your backend's deployed URL.
 
 ## 📱 Responsive Design
 
