@@ -150,7 +150,7 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: FaGithub,
-      title: 'Full Stack Web Development',
+      title: 'Enterprise Web Application Development',
       description: 'Building robust, scalable web applications using modern technologies and best practices.',
       features: [
         'React, Next.js, TypeScript',
@@ -161,8 +161,20 @@ const Services: React.FC = () => {
       ]
     },
     {
+      icon: FaGithub,
+      title: 'Backend API & Microservices Engineering',
+      description: 'Expertise in Node.js and modern backend frameworks for high-performance APIs and scalable systems.',
+      features: [
+        'Node.js core development',
+        'Express.js & Fastify frameworks',
+        'RESTful & GraphQL APIs',
+        'Authentication & security best practices',
+        'Performance optimization & scalability'
+      ]
+    },
+    {
       icon: FaDownload,
-      title: 'Flutter Mobile App Development',
+      title: 'Cross-Platform Mobile App Development',
       description: 'Specialized in Flutter framework for creating beautiful, high-performance cross-platform mobile applications.',
       features: [
         'Flutter framework expertise',
@@ -174,7 +186,7 @@ const Services: React.FC = () => {
     },
     {
       icon: FaLinkedin,
-      title: 'Firebase Backend Services',
+      title: 'Cloud Backend & Serverless Solutions',
       description: 'Complete Firebase integration for scalable, real-time backend solutions and cloud services.',
       features: [
         'Firebase Authentication',
@@ -186,7 +198,7 @@ const Services: React.FC = () => {
     },
     {
       icon: FaTwitter,
-      title: 'API Development & Integration',
+      title: 'API Engineering & Systems Integration',
       description: 'Designing and implementing robust APIs and integrating third-party services.',
       features: [
         'RESTful API design',
@@ -198,10 +210,10 @@ const Services: React.FC = () => {
     },
     {
       icon: FaTwitter,
-      title: 'Database Design & Management',
-      description: 'Designing efficient database schemas and optimizing query performance.',
+      title: 'Database Architecture & Management',
+      description: 'Expert in PostgreSQL, MySQL, MongoDB, Supabase, and more. Designing efficient database schemas and optimizing query performance.',
       features: [
-        'MySQL & MongoDB expertise',
+        'PostgreSQL, MySQL, MongoDB, Supabase expertise',
         'Database schema design',
         'Query optimization',
         'Data migration & backup',
@@ -210,7 +222,7 @@ const Services: React.FC = () => {
     },
     {
       icon: FaGithub,
-      title: 'UI/UX Development',
+      title: 'UI/UX Engineering & Frontend Solutions',
       description: 'Creating clean, responsive, and animated user interfaces that engage users.',
       features: [
         'Responsive web design',
@@ -222,7 +234,7 @@ const Services: React.FC = () => {
     },
     {
       icon: FaEnvelope,
-      title: 'AI-Powered Application Development',
+      title: 'AI & Intelligent Automation Solutions',
       description: 'Integrating AI capabilities to create intelligent and automated solutions.',
       features: [
         'Chatbot integrations',

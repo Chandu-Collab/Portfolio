@@ -611,11 +611,11 @@ const Footer: React.FC = () => {
   ];
 
   const services = [
-    'Web Development',
-    'Mobile Apps',
-    'UI/UX Design',
-    'API Development',
-    'Consulting'
+    { label: 'Web Development', anchor: 'web-development' },
+    { label: 'Mobile Apps', anchor: 'mobile-apps' },
+    { label: 'UI/UX Design', anchor: 'ui-ux-design' },
+    { label: 'API Development', anchor: 'api-development' },
+    { label: 'Consulting', anchor: 'consulting' }
   ];
 
   return (
@@ -734,8 +734,9 @@ const Footer: React.FC = () => {
                 <FooterLink
                   key={index}
                   whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <span>{service}</span>
+                  <Link to={`/services#${service.anchor}`}>{service.label}</Link>
                 </FooterLink>
               ))}
             </QuickLinks>
