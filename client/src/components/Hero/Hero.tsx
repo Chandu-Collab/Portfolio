@@ -252,7 +252,7 @@ const Hero: React.FC = () => {
 
   const handleResumeDownload = () => {
   // Open resume PDF from public folder for static hosting
-  window.open('/Portfolio/UpdatedResume.pdf', '_blank');
+  window.open('/UpdatedResume.pdf', '_blank');
   };
 
   const handleContactScroll = () => {

@@ -298,19 +298,29 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <p>
-                  Hello! I'm a Bachelor of Engineering graduate specializing in Electronics and 
-                  Communication Engineering with a passion for creating impactful mobile and web applications.
+                  Hi, I'm Chandu<br/>
+                  <b>Full-Stack Developer | TypeScript • React • Node.js • GraphQL • 3D Web</b>
                 </p>
                 <p>
-                  My expertise spans across modern technologies including React, Node.js, MySQL, Flutter, 
-                  Firebase, and Three.js. I've successfully delivered several major projects including 
-                  AI-powered school management systems, admin portals for job automation platforms, 
-                  and e-commerce applications.
+                  I’m a Full-Stack Developer and BE (ECE) graduate with strong hands-on experience building scalable web and mobile applications using modern engineering practices.
                 </p>
                 <p>
-                  Beyond coding, I'm constantly exploring new technologies and frameworks to stay at the 
-                  forefront of development trends. When I'm not immersed in code, you'll find me gaming, 
-                  hanging out with friends, or spending precious time with family.
+                  My primary expertise is in TypeScript and React, with production experience in Next.js and Vue.js. I actively build immersive and interactive experiences using Three.js frameworks and 3D engines, delivering high-performance visuals and realistic UI interactions.
+                </p>
+                <p>
+                  On the backend, I specialize in Node.js with Fastify and Express, designing robust REST and GraphQL APIs, scalable service architectures, and performance-optimized systems. I work confidently across PostgreSQL, MySQL, MongoDB, and Supabase, choosing the right data model for each product.
+                </p>
+                <p>
+                  I also develop cross-platform mobile applications using React Native and Flutter, enabling fast iteration and consistent UX across platforms.
+                </p>
+                <p>
+                  I have delivered real-world solutions including AI-powered platforms, automation systems, admin dashboards, and production-ready applications, with a strong focus on clean code, maintainability, and scalability.
+                </p>
+                <p>
+                  I regularly work with AWS and Azure, version control workflows, containerization, and modern deployment pipelines — continuously improving reliability and delivery quality.
+                </p>
+                <p>
+                  💡 I’m passionate about building impactful products, solving complex problems, and staying ahead with emerging technologies.
                 </p>
               </Description>
             </TextContent>
@@ -335,7 +345,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <StatItem>
-              <StatNumber>3+</StatNumber>
+              <StatNumber>4+</StatNumber>
               <StatLabel>Major Projects</StatLabel>
             </StatItem>
             <StatItem>

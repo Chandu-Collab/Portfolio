@@ -129,6 +129,8 @@ const mockSkills: Skill[] = [
   // Backend
   { name: "Node.js", level: 85, category: "Backend" },
   { name: "Express.js", level: 80, category: "Backend" },
+  { name: "Fastify", level: 80, category: "Backend" },
+  { name: "GraphQL", level: 80, category: "Backend" },
   { name: "Python", level: 75, category: "Backend" },
   { name: "PHP", level: 70, category: "Backend" },
   { name: "C#", level: 70, category: "Backend" },
@@ -152,6 +154,8 @@ const mockSkills: Skill[] = [
   { name: "Azure", level: 70, category: "Cloud" },
   { name: "Firebase Hosting", level: 85, category: "Cloud" },
   { name: "Vercel", level: 80, category: "Cloud" },
+  { name: "Netlify", level: 80, category: "Cloud" },
+  { name: "Render", level: 75, category: "Cloud" },
   
   // Tools & Others
   { name: "Git & GitHub", level: 90, category: "Tools" },
