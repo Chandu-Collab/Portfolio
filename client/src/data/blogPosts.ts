@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-02-04',
     readTime: '4 min read',
     tags: ['Three.js', 'Engine', '3D', 'Architecture'],
-    video: '/videos/Our space.mp4'
+    video: '/videos/our-space.mp4'
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-02-11',
     readTime: '4 min read',
     tags: ['Three.js', 'Engine', '3D', 'Interior Design', 'Architecture'],
-    video: '/videos/Study space.mp4'
+    video: '/videos/study-space.mp4'
   },
 
   // ✨ Add your work here! Copy the template below and add your content:
