@@ -232,13 +232,13 @@ const mockProjects: Project[] = [
   },
   {
     id: 3,
-    title: "Fruitsy",
-    description: "A subscription-based fresh fruit delivery platform offering daily, weekly, and monthly plans with customizable bowl sizes. Built with Flutter and Firebase to provide seamless ordering and doorstep delivery of fresh fruits.",
+    title: "Fruitcee",
+    description: "Fruitcee is a premium fresh fruit delivery service that makes healthy snacking effortless. With customizable fruit bowls and curated health packs, it offers convenience, freshness, and quality delivered straight to your doorstep.",
     technologies: ["Flutter", "Firebase", "Firestore", "Real-time DB", "Push Notifications"],
     category: "Mobile",
-    image: '', // intentionally empty to show letters only
-    liveUrl: "#",
-    githubUrl: "#"
+    image: require('../../assets/fruitcee.png'),
+    liveUrl: "https://fruitcee.in",
+    githubUrl: "#" // Placeholder as no GitHub URL is available
   }
 ];
 
@@ -372,14 +372,16 @@ const Projects: React.FC = () => {
                   </TechStack>
                   
                   <ProjectLinks>
-                    <ProjectLink
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub />
-                      Code
-                    </ProjectLink>
+                    {project.githubUrl !== "#" && (
+                      <ProjectLink
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub />
+                        Code
+                      </ProjectLink>
+                    )}
                     <ProjectLink
                       href={project.liveUrl}
                       target="_blank"
