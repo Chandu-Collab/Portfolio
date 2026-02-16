@@ -217,12 +217,12 @@ const mockProjects: Project[] = [
   },
   {
     id: 4,
-    title: "Fruitsy",
-    description: "A subscription-based fresh fruit delivery platform offering daily, weekly, and monthly plans with customizable bowl sizes. Built with Flutter and Firebase.",
+    title: "Fruitcee",
+    description: "Fruitcee is a premium fresh fruit delivery service that makes healthy snacking effortless. With customizable fruit bowls and curated health packs, it offers convenience, freshness, and quality delivered straight to your doorstep.",
     technologies: ["Flutter", "Firebase", "Firestore", "Real-time DB", "Push Notifications"],
     image: '', // No image, will show initials
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://fruitcee.in",
+    githubUrl: "https://github.com/Chandu-Collab/gift",
     featured: true
   }
 ];
