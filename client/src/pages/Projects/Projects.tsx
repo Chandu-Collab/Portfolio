@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaGithub, FaExternalLinkAlt, FaFilter } from 'react-icons/fa';
+import sakhuwaThumb from '../../assets/Sakuwa.png';
 
 const ProjectsContainer = styled.div`
   padding-top: 120px;
@@ -239,6 +240,16 @@ const mockProjects: Project[] = [
     image: require('../../assets/fruitcee.png'),
     liveUrl: "https://fruitcee.in",
     githubUrl: "#" // Placeholder as no GitHub URL is available
+  },
+  {
+    id: 5,
+    title: "Sakhuwa Foundation",
+    description: "A registered private non-profit organization dedicated to driving positive change in society. The foundation works across areas such as community development, education, healthcare, and social welfare, aiming to uplift underprivileged communities and create sustainable impact. Governed by a five-member board, Sakhuwa Foundation is committed to delivering grassroots solutions that empower individuals and foster inclusive growth.",
+    technologies: ["Community Development", "Education", "Healthcare", "Social Welfare"],
+    category: "Non-Profit",
+    image: sakhuwaThumb,
+    liveUrl: "https://sakhuwa.org/",
+    githubUrl: "https://github.com/saharshkmr/sakhuwa_web"
   }
 ];
 
