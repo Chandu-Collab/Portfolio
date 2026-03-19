@@ -224,6 +224,26 @@ const mockProjects: Project[] = [
     liveUrl: "https://fruitcee.in",
     githubUrl: "https://github.com/Chandu-Collab/gift",
     featured: true
+  },
+  {
+    id: 5,
+    title: "Kizuna Verse",
+    description: "Kizuna Verse is an immersive, real-time 3D web experience designed to create emotional storytelling through interactive environments. Inspired by the concept of “kizuna” — meaning deep human connection — the project allows users to explore visually rich digital worlds that blend narrative, design, and interactivity into a meaningful journey.\n\nBuilt using modern web technologies, the experience focuses on delivering cinematic visuals, smooth interactions, and a story-driven flow directly in the browser. It reflects a fusion of creativity and engineering, where each scene is crafted to evoke emotion and engagement.",
+    technologies: [
+      "Three.js",
+      "React",
+      "Next.js",
+      "GSAP",
+      "Framer Motion",
+      "WebGL",
+      "Blender",
+      "Vercel",
+      "Netlify"
+    ],
+    image: require('../../assets/kizunaverse.png'),
+    liveUrl: "https://kizuna-verse.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/kizunaverse",
+    featured: true
   }
 ];
 
