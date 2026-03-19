@@ -270,6 +270,27 @@ const mockProjects: Project[] = [
     image: require('../../assets/kizunaverse.png'),
     liveUrl: "https://kizuna-verse.netlify.app/",
     githubUrl: "https://github.com/Chandu-Collab/kizunaverse"
+  },
+  {
+    id: 7,
+    title: "Lanterns of Eid",
+    description: "Lanterns of Eid is an immersive, real-time 3D web experience designed to celebrate the spirit of Eid through interactive visuals and storytelling. The project creates a festive digital environment featuring glowing lanterns, atmospheric lighting, and smooth user interactions, allowing users to experience the joy and warmth of the occasion in a visually engaging way.\n\nBuilt as a browser-based experience, it combines creativity and technology to deliver a cinematic and emotionally rich festive journey.",
+    technologies: [
+      "Three.js",
+      "React",
+      "Next.js",
+      "WebGL",
+      "GSAP",
+      "Framer Motion",
+      "Blender",
+      "HTML5",
+      "CSS3",
+      "Netlify"
+    ],
+    category: "3D Web Experience",
+    image: require('../../assets/eid.png'),
+    liveUrl: "https://lanterns-of-eid.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/lanterns-of-eid"
   }
 ];
 
