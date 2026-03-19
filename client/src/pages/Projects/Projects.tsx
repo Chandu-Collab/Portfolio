@@ -250,6 +250,47 @@ const mockProjects: Project[] = [
     image: sakhuwaThumb,
     liveUrl: "https://sakhuwa.org/",
     githubUrl: "https://github.com/saharshkmr/sakhuwa_web"
+  },
+  {
+    id: 6,
+    title: "Kizuna Verse",
+    description: "Kizuna Verse is an immersive, real-time 3D web experience designed to create emotional storytelling through interactive environments. Inspired by the concept of “kizuna” — meaning deep human connection — the project allows users to explore visually rich digital worlds that blend narrative, design, and interactivity into a meaningful journey.\n\nBuilt using modern web technologies, the experience focuses on delivering cinematic visuals, smooth interactions, and a story-driven flow directly in the browser. It reflects a fusion of creativity and engineering, where each scene is crafted to evoke emotion and engagement.",
+    technologies: [
+      "Three.js",
+      "React",
+      "Next.js",
+      "GSAP",
+      "Framer Motion",
+      "WebGL",
+      "Blender",
+      "Vercel",
+      "Netlify"
+    ],
+    category: "3D Web Experience",
+    image: require('../../assets/kizunaverse.png'),
+    liveUrl: "https://kizuna-verse.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/kizunaverse"
+  },
+  {
+    id: 7,
+    title: "Lanterns of Eid",
+    description: "Lanterns of Eid is an immersive, real-time 3D web experience designed to celebrate the spirit of Eid through interactive visuals and storytelling. The project creates a festive digital environment featuring glowing lanterns, atmospheric lighting, and smooth user interactions, allowing users to experience the joy and warmth of the occasion in a visually engaging way.\n\nBuilt as a browser-based experience, it combines creativity and technology to deliver a cinematic and emotionally rich festive journey.",
+    technologies: [
+      "Three.js",
+      "React",
+      "Next.js",
+      "WebGL",
+      "GSAP",
+      "Framer Motion",
+      "Blender",
+      "HTML5",
+      "CSS3",
+      "Netlify"
+    ],
+    category: "3D Web Experience",
+    image: require('../../assets/eid.png'),
+    liveUrl: "https://lanterns-of-eid.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/lanterns-of-eid"
   }
 ];
 
