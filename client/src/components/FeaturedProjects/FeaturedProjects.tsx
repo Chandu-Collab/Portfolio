@@ -264,6 +264,16 @@ const mockProjects: Project[] = [
     liveUrl: "https://lanterns-of-eid.netlify.app/",
     githubUrl: "https://github.com/Chandu-Collab/lanterns-of-eid",
     featured: true
+  },
+  {
+    id: 7,
+    title: "Haunted AI Chatbot",
+    description: "A real-time AI-powered chatbot designed to help users escape boredom through an immersive, personality-driven conversational experience. Built with React, Node.js, and OpenAI.",
+    technologies: ["React", "TypeScript", "Node.js", "Express.js", "Socket.IO", "Supabase", "Gemini API", "Tailwind CSS", "Framer Motion"],
+    image: require('../../assets/haunted-ai.png'), // Haunted AI Chatbot thumbnail
+    liveUrl: "https://haunted-ai.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/haunted-ai",
+    featured: true
   }
 ];
 
