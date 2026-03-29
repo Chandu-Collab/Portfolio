@@ -187,7 +187,7 @@ interface Project {
   technologies: string[];
   category: string;
   image: string;
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
 }
 
@@ -218,8 +218,7 @@ const mockProjects: Project[] = [
     technologies: ["React", "Node.js", "MySQL", "AI Integration", "Express"],
     category: "Full Stack",
     image: '', // intentionally empty to show letters only
-    liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/Chandu-Collab/school1"
   },
   {
     id: 2,
@@ -291,6 +290,16 @@ const mockProjects: Project[] = [
     image: require('../../assets/eid.png'),
     liveUrl: "https://lanterns-of-eid.netlify.app/",
     githubUrl: "https://github.com/Chandu-Collab/lanterns-of-eid"
+  },
+  {
+    id: 8,
+    title: "Haunted AI Chatbot",
+    description: "A real-time AI-powered chatbot designed to help users escape boredom through an immersive, personality-driven conversational experience. Built with React, Node.js, and OpenAI.",
+    technologies: ["React", "TypeScript", "Node.js", "Express.js", "Socket.IO", "Supabase", "Gemini API", "Tailwind CSS", "Framer Motion"],
+    category: "Full Stack",
+    image: require('../../assets/haunted-ai.png'), // Haunted AI Chatbot thumbnail
+    liveUrl: "https://haunted-ai.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/haunted-ai"
   }
 ];
 
@@ -434,14 +443,16 @@ const Projects: React.FC = () => {
                         Code
                       </ProjectLink>
                     )}
-                    <ProjectLink
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt />
-                      Live Demo
-                    </ProjectLink>
+                    {project.liveUrl && (
+                      <ProjectLink
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt />
+                        Live Demo
+                      </ProjectLink>
+                    )}
                   </ProjectLinks>
                 </ProjectContent>
               </ProjectCard>
