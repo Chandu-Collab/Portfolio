@@ -187,7 +187,7 @@ interface Project {
   technologies: string[];
   category: string;
   image: string;
-  liveUrl: string;
+  liveUrl?: string;
   githubUrl: string;
 }
 
@@ -218,8 +218,7 @@ const mockProjects: Project[] = [
     technologies: ["React", "Node.js", "MySQL", "AI Integration", "Express"],
     category: "Full Stack",
     image: '', // intentionally empty to show letters only
-    liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/Chandu-Collab/school1"
   },
   {
     id: 2,
@@ -434,14 +433,16 @@ const Projects: React.FC = () => {
                         Code
                       </ProjectLink>
                     )}
-                    <ProjectLink
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaExternalLinkAlt />
-                      Live Demo
-                    </ProjectLink>
+                    {project.liveUrl && (
+                      <ProjectLink
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt />
+                        Live Demo
+                      </ProjectLink>
+                    )}
                   </ProjectLinks>
                 </ProjectContent>
               </ProjectCard>
