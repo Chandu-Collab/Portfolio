@@ -300,6 +300,23 @@ const mockProjects: Project[] = [
     image: require('../../assets/haunted-ai.png'), // Haunted AI Chatbot thumbnail
     liveUrl: "https://haunted-ai.netlify.app/",
     githubUrl: "https://github.com/Chandu-Collab/haunted-ai"
+  },
+  {
+    id: 9,
+    title: "Yumetabi",
+    description: "MemoryScape is an interactive 3D web experience built using Three.js, designed as a personalized digital gift.\n\nThe project allows users to explore a central hub that connects to multiple themed environments, each representing a meaningful place — Tokyo (Japan), Switzerland, and Slovakia. Each world is crafted with realistic elements, ambient sound, lighting, and interactive storytelling to create an emotional and immersive experience.\n\nThe experience combines 3D environments with narrative design, where users can interact with objects, trigger messages, and navigate seamlessly between different worlds using cinematic transitions.\n\nThis project focuses not just on technical implementation, but on creating a meaningful user experience by blending storytelling, design, and real-time 3D rendering in the browser.",
+    technologies: [
+      "Three.js",
+      "React.js",
+      "React Three Fiber",
+      "@react-three/drei",
+      "GSAP",
+      "Three.js loaders (GLTFLoader)"
+    ],
+    image: require('../../assets/yumetabi.png'), // Ensure correct image path
+    liveUrl: "https://yume-tabi.netlify.app",
+    githubUrl: "https://github.com/Chandu-Collab/yumetabi",
+    category: "3D Web Experience"
   }
 ];
 
