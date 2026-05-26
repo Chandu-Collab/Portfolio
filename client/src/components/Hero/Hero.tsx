@@ -285,7 +285,8 @@ const Hero: React.FC = () => {
               BE (ECE) graduate and Full-Stack Developer passionate about building innovative 
               mobile and web applications. I've developed comprehensive solutions including 
               AI-powered school management systems, admin portals for job automation platforms, 
-              and e-commerce applications using React, Node.js, Flutter, and Firebase.
+              and e-commerce applications using React, Node.js, Flutter, and Firebase. 
+              N8n workflow expert specializing in solving real-world problems through AI and building intelligent agents for automation and business intelligence.
             </Description>
             
             <ActionButtons variants={itemVariants}>

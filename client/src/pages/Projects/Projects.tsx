@@ -317,6 +317,24 @@ const mockProjects: Project[] = [
     liveUrl: "https://yume-tabi.netlify.app",
     githubUrl: "https://github.com/Chandu-Collab/yumetabi",
     category: "3D Web Experience"
+  },
+  {
+    id: 10,
+    title: "Between Us 🌙 – An Interactive Story Experience",
+    description: "Built a personalized interactive storytelling web application designed to deliver a meaningful user experience through a sequence of animated story cards.\n\nThe application focuses on emotional storytelling, where each interaction is presented as a smooth, card-based flow with subtle animations and symbolic visual elements inspired by nature.\n\nInstead of traditional scrolling, the experience is structured as a guided narrative, allowing users to progress through moments step-by-step, enhancing engagement and immersion.\n\nThe project emphasizes clean UI design, animation-driven storytelling, and thoughtful user experience, combining minimal aesthetics with meaningful content delivery.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "canvas-confetti",
+      "Responsive Design",
+      "Animation-driven UI"
+    ],
+    category: "Interactive Experience",
+    image: require('../../assets/ghost.png'),
+    liveUrl: "https://betweenu.netlify.app",
+    githubUrl: "https://github.com/Chandu-Collab/between-us"
   }
 ];
 
