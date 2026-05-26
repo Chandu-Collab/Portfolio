@@ -164,7 +164,9 @@ const mockSkills: Skill[] = [
   { name: "Figma", level: 80, category: "Tools" },
   { name: "Canva", level: 85, category: "Tools" },
   { name: "Arduino", level: 70, category: "Tools" },
-  { name: "NPM", level: 90, category: "Tools" }
+  { name: "NPM", level: 90, category: "Tools" },
+  { name: "n8n Workflows", level: 90, category: "Tools" },
+  { name: "LLMs (Design & Integration)", level: 90, category: "Tools" }
 ];
 
 const Skills: React.FC = () => {
