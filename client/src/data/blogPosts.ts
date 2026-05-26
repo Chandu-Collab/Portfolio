@@ -67,6 +67,18 @@ export const blogPosts: BlogPost[] = [
     tags: ['Three.js', 'Engine', '3D', 'Interior Design', 'Architecture'],
     video: '/videos/study-space.mp4'
   },
+  {
+    id: 5,
+    title: 'Between Us 🌙 – An Interactive Story Experience',
+    excerpt: 'Built a personalized interactive storytelling web application designed to deliver a meaningful user experience through a sequence of animated story cards. The application focuses on emotional storytelling with smooth, card-based flow and subtle animations inspired by nature.',
+    category: 'Project',
+    type: 'project',
+    date: '2026-05-26',
+    readTime: '5 min read',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Animations'],
+    image: '/images/ghost.png',
+    link: 'https://github.com/Chandu-Collab/between-us'
+  },
 
   // ✨ Add your work here! Copy the template below and add your content:
   
