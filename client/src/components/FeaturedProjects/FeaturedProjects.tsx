@@ -1,5 +1,6 @@
 import taurusAiThumb from '../../assets/taurus-ai.png';
 import peonyThumb from '../../assets/peony-thumb.png';
+import mahjongThumb from '../../assets/mahjong.png';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -290,6 +291,24 @@ const mockProjects: Project[] = [
     image: require('../../assets/yumetabi.png'), // Ensure correct image path
     liveUrl: "https://yume-tabi.netlify.app",
     githubUrl: "https://github.com/Chandu-Collab/yumetabi",
+    featured: true
+  },
+  {
+    id: 9,
+    title: "Mahjong — Interactive Puzzle & Multiplayer Experience",
+    description: "A modern implementation of the classic Mahjong puzzle game, built with a focus on smooth user experience, real-time interaction, and scalable architecture. The application supports multiple gameplay modes including single-player, cooperative (couple mode), and multiplayer modes with shared and independent boards.\n\nThe project emphasizes performance, clean state management, and interactive UI design using animations and structured game logic. It also explores how frontend systems can handle synchronization, turn-based mechanics, and dynamic game states efficiently.",
+    technologies: [
+      "React (Vite)",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Supabase (PostgreSQL)",
+      "Supabase Auth",
+      "Supabase Realtime"
+    ],
+    image: mahjongThumb,
+    liveUrl: "https://mahjong-u.netlify.app/",
+    githubUrl: "https://github.com/Chandu-Collab/Mahjong",
     featured: true
   }
 ];
