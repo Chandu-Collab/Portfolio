@@ -1,12 +1,4 @@
-# Netlify configuration for React SPA
-
-
 [build]
+  base = "v2"
   command = "npm run build"
-  publish = "build"
-  functions = "netlify/functions"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  # Let Netlify's Next.js runtime automatically configure the publish directory
